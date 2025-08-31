@@ -1,0 +1,117 @@
+/* Minimal, WP‑free CSS built to mirror the reference layout */
+:root{--bg:#F7F3EB;--card:#FFFFFF;--text:#1B1917;--muted:#6E6E6E;--brand:#FF7B01;--brand-dark:#DE6B00;--ink:#111111;--border:#ECE7E1}
+*{box-sizing:border-box}html,body{margin:0;padding:0}
+body{font-family:'Rubik',system-ui,-apple-system,Segoe UI,Roboto,Arial,sans-serif;color:var(--text);background:var(--bg);line-height:1.55}
+h1,h2,h3,h4,h5,h6{font-family:'Poppins',system-ui,-apple-system,Segoe UI,Roboto,Arial,sans-serif}
+.container{width:min(1160px,92%);margin-inline:auto}.center{text-align:center}
+.btn{display:inline-flex;align-items:center;gap:.6rem;padding:.9rem 1.2rem;border-radius:999px;font-weight:800;border:1px solid transparent;transition:all .2s ease;white-space:nowrap}
+.btn-primary{background:var(--brand);color:#fff;box-shadow:0 10px 26px rgba(255,123,1,.28)}.btn-primary:hover{background:var(--brand-dark);transform:translateY(-1px)}
+.btn-ghost{background:transparent;border-color:#d9d2ca;color:var(--text)}.btn-ghost:hover{background:#fff}
+.btn-ghost-light{background:transparent;border-color:#ffffff55;color:#fff}.btn-ghost-light:hover{background:#ffffff12}
+.site-header{position:sticky;top:0;z-index:100;background:var(--bg)}
+.header-inner{display:flex;align-items:center;width:min(1160px,92%);margin:auto;background:#fff;border-radius:48px;padding:18px 22px;margin-top:14px;margin-bottom:14px;box-shadow:none;border:8px solid #FAF4EC}
+.logo{display:flex;align-items:center;gap:14px;font-weight:900;color:#0d0d0d;text-decoration:none}
+.logo-mark{width:36px;height:36px;border-radius:50%;display:inline-block;background:radial-gradient(circle at 35% 30%,#f3e7d3 0%,#e6d6b7 55%,#d9c49d 100%);position:relative;box-shadow:inset 0 2px 6px rgba(255,255,255,.7),inset 0 -2px 8px rgba(0,0,0,.08)}
+.logo-mark::before{content:"";position:absolute;inset:8px;background:conic-gradient(from 45deg,#b69156,#e0c798,#b69156);clip-path:polygon(50% 0%,62% 38%,100% 38%,69% 60%,80% 100%,50% 75%,20% 100%,31% 60%,0% 38%,38% 38%);border-radius:6px;opacity:.9}
+.nav{display:flex;gap:40px;margin-left:auto;margin-right:28px}.nav a{color:var(--text);font-weight:700;opacity:.9;text-decoration:none}.nav a:hover{opacity:1;transform:translateY(-1px)}
+.btn-quote{text-transform:uppercase;letter-spacing:.04em;padding:14px 26px}
+.hamburger{display:none;background:none;border:0;cursor:pointer;margin-left:8px}
+.hamburger span{display:block;width:26px;height:2px;background:#111;margin:5px 0;transition:.2s}
+.hamburger.active span:nth-child(1){transform:translateY(7px) rotate(45deg)}.hamburger.active span:nth-child(2){opacity:0}.hamburger.active span:nth-child(3){transform:translateY(-7px) rotate(-45deg)}
+.mobile-nav{display:none;flex-direction:column;padding:10px 4%;gap:10px;border-top:1px solid var(--border);background:var(--bg)}.mobile-nav.open{display:flex}
+.hero{padding:54px 0 24px}.hero-grid{display:grid;grid-template-columns:1.2fr 1fr;gap:48px;align-items:center}
+.eyebrow{font-weight:900;color:var(--brand);letter-spacing:.08em;text-transform:uppercase;font-size:.75rem;margin:0 0 .6rem}
+.display{font-size:clamp(36px,5vw,64px);line-height:1.05;margin:.2rem 0 1rem;letter-spacing:-.02em}
+.subtext{color:var(--muted);max-width:52ch}.hero-ctas{display:flex;gap:12px;margin:22px 0 28px}
+.steps{display:flex;align-items:center;gap:14px;margin-top:12px;flex-wrap:wrap}.step{display:flex;align-items:center;gap:10px}
+.step-badge{width:36px;height:36px;border-radius:50%;background:#fff;display:grid;place-items:center;font-weight:900;color:var(--brand);border:1px solid var(--border)}.chev{opacity:.5;font-size:22px}
+.hero-right{position:relative}.hero-photo{margin:0;position:relative;border-radius:18px;overflow:hidden;box-shadow:0 20px 40px rgba(0,0,0,.10)}.hero-photo img{display:block;width:100%;height:auto}
+.quote-card{position:absolute;top:-18px;left:-18px;background:#fff;border:1px solid var(--border);border-radius:16px;padding:16px;width:min(340px,86%);box-shadow:0 10px 24px rgba(0,0,0,.08)}
+.quote-mark{color:var(--brand);display:block;margin-bottom:6px}.quote-text{margin:0 0 .6rem}.quote-meta{font-size:.85rem;color:var(--muted)}
+.about{padding:60px 0}.about-grid{display:grid;grid-template-columns:1.05fr 1fr;gap:40px;align-items:center}
+.about-img.big{border-radius:16px;overflow:hidden;box-shadow:0 16px 36px rgba(0,0,0,.08)}.about-img.big img{display:block;width:100%;height:auto}
+.about-row{display:flex;gap:16px;align-items:center;margin-top:16px}.about-video{position:relative;display:block;border-radius:12px;overflow:hidden;flex:1;min-width:0;box-shadow:0 10px 24px rgba(0,0,0,.08)}.about-video img{display:block;width:100%;height:auto}
+.about-video .play{position:absolute;inset:auto auto 10px 10px;background:#fff;color:var(--brand);width:40px;height:40px;display:grid;place-items:center;border-radius:999px;box-shadow:0 6px 16px rgba(0,0,0,.12)}
+.about-badge{width:220px;background:#fff;border:1px solid var(--border);border-radius:14px;padding:14px 16px;box-shadow:0 10px 24px rgba(0,0,0,.08)}.about-badge .stars{color:#f59f00;font-weight:900;letter-spacing:.12em}.badge-text{font-size:.9rem;color:var(--muted)}
+.about-copy h2{font-size:clamp(26px,4vw,40px);line-height:1.15;margin:.3rem 0 1rem}
+.ticklist{display:grid;gap:8px;padding-left:1.2rem}.ticklist li{position:relative}.ticklist li::before{content:"";position:absolute;left:-1.2rem;top:.45rem;width:10px;height:10px;border:2px solid var(--brand);border-radius:3px;transform:rotate(45deg)}
+.services{padding:70px 0}.max-600{max-width:60ch;margin-inline:auto;color:var(--muted)}
+.service-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:18px;margin-top:28px}.service-grid.single{grid-template-columns:1fr;width:min(760px,100%);margin-inline:auto;margin-top:18px}
+.card{background:var(--card);border:1px solid var(--border);border-radius:16px;padding:22px;box-shadow:0 8px 22px rgba(0,0,0,.06);display:flex;flex-direction:column;gap:.6rem}
+.card .icon{color:var(--brand)}.card h3{margin:.2rem 0 .2rem}.card p{color:var(--muted);margin:0 0 .2rem}.card .learn{font-weight:800;color:var(--brand)}
+.cta-banner{padding:70px 0}.cta-inner{background:#111;color:#fff;border-radius:22px;display:grid;grid-template-columns:1.1fr .9fr;gap:28px;padding:40px;align-items:center;overflow:hidden;position:relative}
+.cta-photo{border-radius:18px;overflow:hidden;box-shadow:0 12px 28px rgba(0,0,0,.35)}.cta-photo img{display:block;width:100%;height:auto}
+.cta-copy h2{font-size:clamp(26px,4vw,40px);margin:.2rem 0 1rem}.cta-buttons{display:flex;gap:12px}
+.testimonials{padding:60px 0}.testi-grid{display:grid;grid-template-columns:1fr 1fr;gap:18px;margin-top:20px}
+.testi-card{background:#fff;border:1px solid var(--border);border-radius:16px;padding:24px;box-shadow:0 8px 22px rgba(0,0,0,.06);position:relative}
+.quote-soft{position:absolute;top:12px;left:16px;font-size:44px;color:#e6ded6;font-weight:900;line-height:0.8}
+.testi-card p{margin:12px 0 16px}.testi-meta .name{font-weight:900}.testi-meta .role{color:var(--muted);font-size:.95rem}.testi-meta .stars{color:#f59f00;letter-spacing:.08em;margin-top:6px}
+.site-footer{background:#0f0f0f;color:#c8c8c8;margin-top:30px}.footer-grid{display:grid;grid-template-columns:1.3fr 1fr;gap:18px;padding:40px 0}
+.footer-logo{color:#fff;text-decoration:none}.site-footer h4{color:#fff;margin:0 0 10px}.contact{list-style:none;padding:0;margin:0;display:grid;gap:8px}.footnote{border-top:1px solid #2a2a2a;text-align:center;padding:14px 0;font-size:.9rem;color:#9a9a9a}
+.page-hero{padding:50px 0 10px}.page-hero h1{font-size:clamp(30px,5vw,46px);margin:0}.generic .content{padding:20px 0}
+.contact-form{display:grid;gap:14px;background:#fff;border:1px solid var(--border);border-radius:16px;padding:22px;box-shadow:0 8px 22px rgba(0,0,0,.06)}
+.form-row{display:grid;grid-template-columns:1fr 1fr;gap:12px}input,textarea{width:100%;border:1px solid #d8d3cc;border-radius:10px;padding:12px 14px;font:inherit}label{display:grid;gap:6px;font-weight:600}
+@media (max-width:980px){.nav,.btn-quote{display:none}.hamburger{display:block}.hero-grid{grid-template-columns:1fr}.about-grid{grid-template-columns:1fr}.service-grid{grid-template-columns:1fr 1fr}.testi-grid{grid-template-columns:1fr}.cta-inner{grid-template-columns:1fr}.form-row{grid-template-columns:1fr}}
+@media (max-width:620px){.service-grid{grid-template-columns:1fr}.hero{padding-top:28px}}
+/* --- Update: remove underline on CTA buttons --- */
+.btn, .btn:hover, .btn:focus, .btn:active,
+.btn-primary, .btn-primary:hover, .btn-primary:focus, .btn-primary:active,
+.btn-ghost, .btn-ghost:hover, .btn-ghost:focus, .btn-ghost:active,
+.btn-ghost-light, .btn-ghost-light:hover, .btn-ghost-light:focus, .btn-ghost-light:active {
+  text-decoration: none !important;
+}
+
+/* --- Update: logo image replaces CSS emblem --- */
+.logo-img{
+  width: 40px;
+  height: 40px;
+  object-fit: contain;
+  display: inline-block;
+}
+/* Remove old CSS emblem space if any */
+.logo-mark{ display:none !important; }
+
+/* --- Update: About row when video thumbnail removed --- */
+.about-row{justify-content:flex-start}
+
+/* --- Add spacing between service blocks and CTA below --- */
+.services .service-grid{ margin-bottom: 22px; }
+.services .center{ margin-top: 14px; }
+
+/* --- Larger brand text in header --- */
+.logo-text{
+  font-size: clamp(18px, 2vw, 22px);
+  font-weight: 900;
+}
+
+/* Footer columns & links */
+.footer-grid{grid-template-columns:1.1fr .9fr .7fr .9fr}
+.footer-links{list-style:none;margin:0;padding:0;display:grid;gap:8px}
+.footer-links a{color:#c8c8c8;text-decoration:none}
+.footer-links a:hover{color:#ffffff}
+
+.capabilities{width: 77%;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 16px;
+    margin-top: 18px;
+    margin-inline: auto;}
+.cap-card{background:#fff;border:1px solid var(--border);border-radius:16px;padding:18px;box-shadow:0 8px 22px rgba(0,0,0,.05)}
+.small-note{color:var(--muted)}
+
+.form-embed{background:#fff;border:1px solid var(--border);border-radius:16px;overflow:hidden;box-shadow:0 8px 22px rgba(0,0,0,.06)}
+.gform{width:100%;height:900px;display:block}
+.service-buckets{width: 77%;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 16px;
+    margin-top: 18px;
+    margin-inline: auto;}
+.bucket{background:#fff;border:1px solid var(--border);border-radius:16px;padding:18px;box-shadow:0 8px 22px rgba(0,0,0,.05)}
+.bucket h3{margin-top:0}
+.bucket ul{margin:8px 0 0 18px}
+@media (max-width:980px){
+  .footer-grid{grid-template-columns:1fr 1fr}
+  .capabilities{grid-template-columns:1fr}
+  .service-buckets{grid-template-columns:1fr}
+}
